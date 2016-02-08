@@ -16,7 +16,6 @@ div.style.color = 'white';
 $("#myDivId").css('z-index', 8675309);
 
 function tagging(imgSrc) {
-	console.log('start tagging...');
 	var df = "http://www.clarifai.com/img/metro-north.jpg";
 	var access_token = "w9VBZjIfxJovNdjHS44KNS5EgrXx2U";
 	var url = "https://api.clarifai.com/v1/tag?access_token=" + access_token + "&url=" + imgSrc;
