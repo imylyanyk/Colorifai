@@ -1,7 +1,7 @@
 # Colorifai
 Chrome extension which helps colorblind to recognize colors in images
 
-# Philosophy
+### Philosophy
 
 Colorblind people have different vision, and, sometimes, they don't see the whole spectre of colors. For example, the story used to explain color-blindness to children involves the man who went to the forest and brought home the green strawberries, thinking that they must be tasty. The reason for such a weird behavior is that man, who didn't see the difference between red and green color. To demonstrate that, I provide the two pictures. On the left - the picture how we see it. On the right - the how the first picture *may* appear to the colorblind. Basically, colorlind will see two similar images below.
 
@@ -18,7 +18,7 @@ For example, for the picture below, user will see the next picture:
 
 You may notice the `IndianRed` listed here. So, user can make an assumption that the fruit on the picture is of a red color!
 
-## How to make it work
+### How to make it work
 
 **Step 1** Checkout this repository to your place.
 
@@ -40,7 +40,7 @@ You shouldn't worry about `accessToken` - it's left empty, because application w
 
 **Step 4** Open any website with images, hover over image and in the top left corner you will see the list of colors on the image.
 
-## Other
+### Other
 You can get more info about `Color` endpoint here: http://newdocs.clarifai.com/guide/color
 
 [img1]: http://www.vischeck.com/images/strawberries.jpg "Red strawberries"
