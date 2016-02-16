@@ -13,6 +13,7 @@ So, this chrome extension is aimed to help colorblind people browse the internet
 Using this extension, the person will see the list of the main colors on the picture.
 
 For example, for the picture below, user will see the next picture:
+
 ![usecase][img3]
 
 You may notice the `IndianRed` listed here. So, user can make an assumption that the fruit on the picture is of a red color!
