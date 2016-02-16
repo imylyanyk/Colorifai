@@ -6,11 +6,13 @@ div.id = 'myDivId';
 div.style.position = 'absolute';
 div.style.top = '10px';
 div.style.left = '10px';
-div.style.height = '15px';
+div.style.height = '19px';
 div.style.backgroundColor = '#000000';
 div.style.fontSize = '12px';
 div.style.paddingLeft = '4px';
 div.style.paddingRight = '4px';
+div.style.paddingTop = '2px';
+div.style.paddingBottom = '2px';
 div.style.color = 'white';
 
 $("#myDivId").css('z-index', 8675309);
@@ -23,17 +25,30 @@ function tryRefreshAccessToken() {
 	});
 }
 
+function handleColor(data) {
+	var arr = data.results[0].colors;
+	_colors = "";
+	for(var i=0;i<arr.length;i++) {
+		if(i!=0) _colors += ", ";
+		_colors += arr[i].w3c.name;
+	}
+	console.log(_colors);
+	$("#myDivId").html(_colors);
+}
+
+function handleClass(data) {
+	var _class = data.results[0].result.tag.classes[0];
+		console.log(data.results[0].result.tag.classes);
+		console.log(_class);
+		$("#myDivId").html(_class);
+}
+
 function tagging(imgSrc, count) {
 	if (count == undefined)
 		count = 1;
 	var df = "http://www.clarifai.com/img/metro-north.jpg";
-	var url = "https://api.clarifai.com/v1/tag?access_token=" + Clarifai.accessToken + "&url=" + imgSrc;
-	$.get(url, function(data) {
-		var _class = data.results[0].result.tag.classes[0];
-		console.log(data.results[0].result.tag.classes);
-		console.log(_class);
-		$("#myDivId").html(_class);
-	}).fail(function(xhr, status, error) {
+	var url = "https://api.clarifai.com/v1/color?access_token=" + Clarifai.accessToken + "&url=" + imgSrc;
+	$.get(url, handleColor).fail(function(xhr, status, error) {
 		if(xhr.status == 401) {
 			tryRefreshAccessToken();
 			if(count < 3) {
