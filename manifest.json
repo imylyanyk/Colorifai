@@ -1,7 +1,7 @@
 {
 "manifest_version": 2,
-    "name": "[your extension name here]",
-    "description": "[your extension description here]",
+    "name": "Colorifai",
+    "description": "Helps colorblind people browse the internet in colors",
     "version": "1",
     "content_scripts": [
         {
