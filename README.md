@@ -32,7 +32,7 @@ var Clarifai = {
 ```
 In this file you will store the credentials for the Clarifai API.
 
-To get `cliendId` and `clientSecret` you have to create new application at [Clarifai developers website][link1].
+To get `clientId` and `clientSecret` you have to create new application at [Clarifai developers website][link1].
 
 You shouldn't worry about `accessToken` - it's left empty, because application will try to get new access token when current access token isn't valid or outdated.
 
@@ -41,7 +41,7 @@ You shouldn't worry about `accessToken` - it's left empty, because application w
 **Step 4** Open any website with images, hover over image and in the top left corner you will see the list of colors on the image.
 
 ### Other
-You can get more info about `Color` endpoint here: http://newdocs.clarifai.com/guide/color
+You can get more info about `Color` endpoint here: https://developer.clarifai.com/guide/color
 
 [img1]: http://www.vischeck.com/images/strawberries.jpg "Red strawberries"
 [img2]: http://www.vischeck.com/images/strawberries_deutan.jpg "Red strawberries for colorblind"
